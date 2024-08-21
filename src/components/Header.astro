@@ -1,0 +1,21 @@
+---
+const navItems = [
+  { href: '#', text: 'Destinations' },
+  { href: '#', text: 'Types of Trips' },
+  { href: '#', text: 'Why Aventura?' },
+  { href: '#', text: 'Stories' },
+];
+---
+
+<header class="bg-gray-800 p-4">
+  <div class="container mx-auto flex justify-between items-center">
+    <div class="text-xl font-bold">Aventura</div>
+    <nav>
+      {navItems.map(item => (
+        <a href={item.href} class="text-white hover:text-yellow-400 ml-4">{item.text}</a>
+      ))}
+      <a href="#" class="bg-yellow-400 text-gray-900 px-4 py-2 rounded ml-4">Sign In</a>
+      <a href="#" class="border border-yellow-400 text-yellow-400 px-4 py-2 rounded ml-4">Join</a>
+    </nav>
+  </div>
+</header>
