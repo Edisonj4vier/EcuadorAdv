@@ -7,17 +7,17 @@ import type { Destination } from '../types/destination';
 const destinations: Destination[] = [
   {
     title: 'Costa',
-    description: 'The capital city of Ecuador, surrounded by mountains and known for its well-preserved colonial center.',
+    description: 'Es más que hermosas playas, es la tierra de los manglares más altos del mundo',
     image: '/images/costa.jpg'
   },
   {
     title: 'Galapagos',
-    description: 'A volcanic archipelago in the Pacific Ocean, famous for its diverse wildlife and natural beauty.',
+    description: 'Un archipiélago volcánico en el océano Pacífico, famoso por su diversa fauna y belleza natural.',
     image: '/images/galapagos.jpg'
   },
   {
     title: 'Sierra',
-    description: 'An active stratovolcano in the Andes Mountains, popular for hiking and climbing.',
+    description: 'Un estratovolcán activo en la cordillera de los Andes, popular para practicar senderismo y escalada.',
     image: '/images/sierra.jpg'
   }
 ];
@@ -26,7 +26,7 @@ const destinations: Destination[] = [
 <Layout title="Aventura - Ecuador">
   <Hero />
   <section class="container mx-auto py-16">
-    <h2 class="text-3xl font-bold mb-8">More about Ecuador</h2>
+    <h2 class="text-3xl font-bold mb-8">Más sobre Ecuador</h2>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       {destinations.map(destination => (
         <DestinationCard {...destination} />
