@@ -1,0 +1,36 @@
+---
+
+import Layout from "../layouts/Layout.astro";
+import DestinoCard from "../components/DestinationCard.astro";
+
+
+const destinos = [
+  {
+    title: "Costa",
+    description: "Es más que hermosas playas, es la tierra de los manglares más altos del mundo",
+    image: "/images/costa.jpg"
+  },
+  {
+    title: "Galapagos",
+    description: "Un archipiélago volcánico en el océano Pacífico, famoso por su diversa fauna y belleza natural.",
+    image: "/images/galapagos.jpg"
+  },
+  {
+    title: "Sierra",
+    description: "Un estratovolcán activo en la cordillera de los Andes, popular para practicar senderismo y escalada.",
+    image: "/images/sierra.jpg"
+  }
+];
+---
+
+
+<Layout title="TuristApp - Ecuador">
+  <section class="container mx-auto py-16">
+    <h2 class="text-3xl font-bold mb-8 text-center">Nuestros Destinos</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 place-content-center place-items-center">
+      {destinos.map(destino => (
+        <DestinoCard {...destino} />
+      ))}
+    </div>
+  </section>
+</Layout>

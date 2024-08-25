@@ -1,0 +1,33 @@
+---
+const servicios = [
+  {
+    title: "Hospedaje",
+    description: "Alojamiento en hermosos hoteles y resorts en la playa.",
+    image: "/public/images/servicio_hospedaje.webp",
+  },
+  {
+    title: "Comida Tipica",
+    description: "Disfruta de la deliciosa comida ecuatoriana en los mejores restaurantes.",
+    image: "/public/images/servicio_comida.webp",
+  },
+  {
+    title: "Transporte",
+    description: "Transporte privado y seguro para recorrer los destinos turísticos de Ecuador.",
+    image: "/public/images/servicio_transporte.webp",
+  },
+  {
+    title: "Guía Turística",
+    description: "Guías turísticos expertos en la historia y cultura de Ecuador.",
+    image: "/public/images/servicio_actividad.webp",
+  }
+];
+import ServicioCard from './ServicioCard.astro';
+---
+  <section class="container mx-auto py-16">
+    <h2 class="text-3xl font-bold mb-8 text-center">Nuestros Servicios</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 place-content-center place-items-center">
+      {servicios.map(servicio => (
+        <ServicioCard {...servicio} />
+      ))}
+    </div>
+  </section>

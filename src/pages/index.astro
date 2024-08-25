@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import DestinationCard from '../components/DestinationCard.astro';
 import type { Destination } from '../types/destination';
+import Servicios from '../components/Servicios.astro';
 
 const destinations: Destination[] = [
   {
@@ -23,9 +24,10 @@ const destinations: Destination[] = [
 ];
 ---
 
-<Layout title="Aventura - Ecuador">
+<Layout title="TuristApp - Ecuador">
   <Hero />
-  <section class="container mx-auto py-16">
+  <section class="container mx-auto py-1">
+    <Servicios />
     <h2 class="text-3xl font-bold mb-8">Más sobre Ecuador</h2>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       {destinations.map(destination => (
@@ -33,4 +35,5 @@ const destinations: Destination[] = [
       ))}
     </div>
   </section>
+
 </Layout>

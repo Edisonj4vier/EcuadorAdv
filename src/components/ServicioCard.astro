@@ -1,0 +1,15 @@
+---
+import type { Servicio } from '../types/servicio'; 
+export interface Props extends Servicio {}
+
+const { title, description, image } = Astro.props;
+---
+
+<div class="relative bg-gray-800 overflow-hidden rounded-full">
+    <img src={image} alt={title} class="w-full h-52 object-cover transition-opacity duration-300 ease-in-out">
+    <div class="absolute inset-0 flex flex-col justify-center items-center bg-gray-800 bg-opacity-75 opacity-0 hover:opacity-100 transition-opacity duration-300 ease-in-out p-4 text-center">
+      <h3 class="text-lg font-semibold mb-2 text-white">{title}</h3>
+      <p class="text-sm text-white">{description}</p>
+    </div>
+  </div>
+  
